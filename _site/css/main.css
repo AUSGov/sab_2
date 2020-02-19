@@ -5084,6 +5084,8 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 /* MODERATOR MENU */
 header { position: relative; }
 
+#moderator-menu .clear-complete { color: #ffffff; display: inline-block; margin-bottom: 40px; cursor: pointer; padding: 10px 20px; border: #ffffff solid 1px; border-radius: 10px; }
+
 #moderator-menu .moderator-toggle { position: absolute; top: 10px; right: 10px; }
 
 #moderator-menu .moderator-toggle p { font-size: 14px; color: #4569A0; }

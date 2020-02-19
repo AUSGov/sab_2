@@ -44,8 +44,7 @@ $(document).ready(function () {
             
             $(this).parent().next('.sub-menu').removeClass('open');
         } else {
-            //console.log($(this).parent().next('.sub-menu'));
-            
+  
             $(this).addClass('open');
             $(this).parent().next('.sub-menu').addClass('open');
         }
@@ -64,25 +63,49 @@ $(document).ready(function () {
     
     /*----------- SAB Completed pages  ----------- */
     
+    // Function to determine whether all the subpages have been seen/completed.
+    function sectionComplete(link_selector, section_selector){
+        
+        var section_count = $(link_selector).length;
+        var complete_count = 0;
+        
+        $(link_selector).each(function(){
+            if ( $(this).hasClass('complete')) {
+                console.log('Complete');
+                complete_count = complete_count + 1;  
+            }  
+        });
+        
+        if (section_count == complete_count) {
+            $(section_selector).addClass('complete');
+        }   
+    }
     
     if ($('#guide_navlink_wrapper_1').length) {
         var page_url = window.location.pathname;
-    
+        
+        sessionStorage.setItem(page_url, page_url);
+        
         $('.sub-menu li a').each(function(){
             if ($(this).attr('href') == sessionStorage.getItem($(this).attr('href'))) {
                 $(this).find('span').addClass('complete');
             }
         });
-        sessionStorage.setItem(page_url, page_url);
-      
-        $('.sub-menu').each(function(){
-           
-           console.log($('a', this).attr('href'));
-            
-
-        });
+        
+        sectionComplete('.section-1 .page_read', '#section-1 .section_read');  
+        sectionComplete('.section-2 .page_read', '#section-2 .section_read');  
+        sectionComplete('.section-3 .page_read', '#section-3 .section_read');  
+        sectionComplete('.section-4 .page_read', '#section-4 .section_read');  
+        sectionComplete('.section-5 .page_read',  '#section-5 .section_read'); 
+        sectionComplete('.section-6 .page_read', '#section-6 .section_read');  
         
     }
+    
+    $('#moderator-menu .clear-complete').on('click', function(){
+        sessionStorage.clear();
+        $('.page_read').removeClass('complete');
+        $('.section_read').removeClass('complete');
+    });
    
     /*----------- General page functionality ----------- */
 
