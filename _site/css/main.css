@@ -5032,7 +5032,7 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper ul ul li { font-weight: 400; padding: 10px 24px 10px 16px; font-size: 14px; background: none; position: relative; }
 
-#guide_nav_wrapper #guide_nav .guide_menu_wrapper ul ul li a { padding-right: 80px; display: inline-block; }
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper ul ul li a { padding-right: 100px; display: inline-block; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper ul ul li:hover { background: none; }
 
@@ -5048,7 +5048,9 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-landing-link { padding: 0; }
 
-#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-landing-link a { display: inline-block; padding: 10px 16px; width: 80%; color: #333333; background: #FFF4D0; }
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-landing-link a { display: inline-block; padding: 10px 16px; width: 80%; color: #333333; background: #FFF4D0; position: relative; }
+
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-landing-link a .complete { position: absolute; background: url("../assets/icon_green_tick_circle.svg") no-repeat; width: 24px; height: 24px; right: 16px; top: 10px; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-landing-link a:hover { text-decoration: underline; background: #FFEAAA; }
 
@@ -5062,13 +5064,15 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu a { color: #333333; }
 
-#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span { text-transform: none; display: inline-block; padding: 0 10px; border: solid 2px #FFD964; border-radius: 16px; margin-left: 10px; font-size: 12px; float: right; position: absolute; right: 0; width: 20%; text-align: center; }
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.required, #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.optional { text-transform: none; display: inline-block; padding: 0 10px; border: solid 2px #FFD964; border-radius: 16px; margin-left: 10px; font-size: 12px; float: right; position: absolute; right: 0; width: 20%; text-align: center; }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.required { background: #FFD964; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; top: calc(50% - 11px); }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.optional { border: solid 2px #FFD964; font-family: "Open Sans", sans-serif; font-weight: 400; font-style: normal; top: calc(50% - 11px); }
 
 #guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu.open { display: block; }
+
+#guide_nav_wrapper #guide_nav .guide_menu_wrapper .sub-menu span.complete { position: absolute; width: 16px; height: 12px; background: url("../assets/icon_green_tick.svg") no-repeat; right: calc(20% + 20px); top: calc(50% - 8px); }
 
 #guide_nav_wrapper #guide_nav .switch_guides { margin-top: 48px; }
 

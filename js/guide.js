@@ -1,7 +1,6 @@
 /*jshint browser: true, devel: true, jquery: true*/
 
 $(document).ready(function () {
-
     
     /*----------- SAB Navigation functionality  ----------- */
     
@@ -63,6 +62,27 @@ $(document).ready(function () {
     });
     
     
+    /*----------- SAB Completed pages  ----------- */
+    
+    
+    if ($('#guide_navlink_wrapper_1').length) {
+        var page_url = window.location.pathname;
+    
+        $('.sub-menu li a').each(function(){
+            if ($(this).attr('href') == sessionStorage.getItem($(this).attr('href'))) {
+                $(this).find('span').addClass('complete');
+            }
+        });
+        sessionStorage.setItem(page_url, page_url);
+      
+        $('.sub-menu').each(function(){
+           
+           console.log($('a', this).attr('href'));
+            
+
+        });
+        
+    }
    
     /*----------- General page functionality ----------- */
 
@@ -94,22 +114,22 @@ $(document).ready(function () {
     
     // Header navigation links   
     $('#header-registrations-link').on('click',function(){
-        window.location.pathname = "/sab/pages-topic/Registrations.html";
+        window.location.pathname = "/sab_2/pages-topic/Registrations.html";
     });
     $('#header-business-link').on('click',function(){
-        window.location.pathname = "/sab/pages-topic/Business-Information.html";
+        window.location.pathname = "/sab_2/pages-topic/Business-Information.html";
     });
     $('#header-grants-link').on('click',function(){
-        window.location.pathname = "/sab/pages-topic/Grants-programs.html";
+        window.location.pathname = "/sab_2/pages-topic/Grants-programs.html";
     });
     $('#header-advice-link').on('click',function(){
-        window.location.pathname = "/sab/pages-topic/Expertise-advice.html";
+        window.location.pathname = "/sab_2/pages-topic/Expertise-advice.html";
     });
     $('#header-events-link').on('click',function(){
-        window.location.pathname = "/sab/pages-topic/Events-training.html";
+        window.location.pathname = "/sab_2/pages-topic/Events-training.html";
     });
     $('#header-news-link').on('click',function(){
-        window.location.pathname = "/sab/pages-content/News.html";
+        window.location.pathname = "/sab_2/pages-content/News.html";
     });    
 
     
@@ -180,7 +200,6 @@ $(document).ready(function () {
         // Replace spaces with hyphens and remove numerical characters & punctuation at the start where necessary       
         var sticky_list_2 = {};
         $('.anchor-menu a').each(function(){
-            //console.log($(this));
             var a_text = $(this).text(),
                 text_no_num = a_text.replace(/[0-9]/g, ''),
                 text_no_punctuation = text_no_num.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?\']/g,''),
@@ -203,11 +222,11 @@ $(document).ready(function () {
                 element_id = '#' + sticky_list_2[a_text],
                 element_position = $(element_id).offset();
             
-            console.log(element_id);
+            //console.log(element_id);
             
             if ($(element_id).length){
-                console.log(element_id);
-                console.log(element_position);
+                //console.log(element_id);
+                //console.log(element_position);
                 $(this).attr('data-value', Math.round(element_position.top));
         
                 $(this).on('click', function(){
