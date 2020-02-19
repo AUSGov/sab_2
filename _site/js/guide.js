@@ -96,7 +96,7 @@ $(document).ready(function () {
         sectionComplete('.section-2 .page_read', '#section-2 .section_read');  
         sectionComplete('.section-3 .page_read', '#section-3 .section_read');  
         sectionComplete('.section-4 .page_read', '#section-4 .section_read');  
-        sectionComplete('.section-5 .page_read',  '#section-5 .section_read'); 
+        sectionComplete('.section-5 .page_read', '#section-5 .section_read'); 
         sectionComplete('.section-6 .page_read', '#section-6 .section_read');  
         
     }

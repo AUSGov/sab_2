@@ -5016,9 +5016,9 @@ footer { box-shadow: 0 50vh 0 50vh #18335C; }
 
 #guide_nav_wrapper #guide_nav .guide_heading-wrapper { padding: 48px 0px 32px 12%; background: #FFD964; }
 
-#guide_nav_wrapper #guide_nav .guide_heading-wrapper h3 { margin-bottom: 16px; padding: 0 20% 0 0; color: #333333; font-size: 32px; line-height: 38px; }
+#guide_nav_wrapper #guide_nav .guide_heading-wrapper h3 { margin-bottom: 16px; padding: 0 20% 0 0; color: #333333; font-size: 24px; line-height: 28px; }
 
-#guide_nav_wrapper #guide_nav .guide_heading-wrapper a { text-decoration: none; }
+#guide_nav_wrapper #guide_nav .guide_heading-wrapper a { text-decoration: underline; color: #333333; }
 
 #guide_nav_wrapper #guide_nav .guide_heading-wrapper a:hover { text-decoration: underline; color: #333333; }
 
