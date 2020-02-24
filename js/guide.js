@@ -11,7 +11,12 @@ $(document).ready(function () {
             
             var parent_ul = $(this).parent().parent();
             parent_ul.addClass('current').addClass('open');
-            parent_ul.prev().addClass('current').addClass('open');
+            //parent_ul.find("sub-menu-toggle").addClass('current').addClass('opened');
+            
+            var previous_li =  parent_ul.prev('li');
+            
+            previous_li.addClass("current-page-open"); 
+            $('.current-page-open').find("btn").addClass("open");
         }
     });
     
@@ -39,14 +44,15 @@ $(document).ready(function () {
     $('#guide_nav_wrapper .sub-menu-toggle').on('click', function(){
         
         if ($(this).hasClass('open')) {
-            console.log("I am open");
-            $(this).removeClass('open');
             
+            $(this).removeClass('open');
+            console.log("I've been closed");
             $(this).parent().next('.sub-menu').removeClass('open');
         } else {
   
             $(this).addClass('open');
             $(this).parent().next('.sub-menu').addClass('open');
+            console.log("I've been opened");
         }
     });
     
